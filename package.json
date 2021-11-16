@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -20,6 +20,7 @@
     "http-errors": "~1.6.3",
     "jquery-confirm": "^3.3.4",
     "knex": "^0.95.14",
+    "morgan": "^1.10.0",
     "mysql2": "^2.3.3-rc.0",
     "node-redis": "^0.1.7",
     "node-schedule": "^2.0.0",

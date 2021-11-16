@@ -5,11 +5,11 @@ const knex = require('../db/knex');
 /* GET home page. */
 router.get('/', async function(req, res, next) {
 
-    const ccList = await knex.raw("select * from public.client");
-    console.log(ccList.rows[0]);
+    const ccList = await knex.select().table('public.client');
+    console.log(ccList);
     res.render('index', { 
         title: 'Express',
-        client: ccList.rows[0]
+        client: ccList[0]
     });
 });
 
