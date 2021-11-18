@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/viewer/iLt/Tmplt/eBsc/cPBlue/skin.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>rinoGIS Viewer</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/component/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/component/jquery/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/component/jquery/jquery-ui.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/component/jquery/selectric.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/reset.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/fontStyle.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/common.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/topBar.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/selectBox.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/statusGraph.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/statusTotal.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/gisWidget.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/cctvPopup.css" />
+<link href="${pageContext.request.contextPath}/viewer/css/chunk-common.css" rel="preload" as="style">
+<link href="${pageContext.request.contextPath}/viewer/css/rino.css" rel="preload" as="style">
+<link href="${pageContext.request.contextPath}/viewer/js/chunk-common.js" rel="modulepreload" as="script">
+<link href="${pageContext.request.contextPath}/viewer/js/chunk-vendors.js" rel="modulepreload" as="script">
+<link href="${pageContext.request.contextPath}/viewer/js/rino.js" rel="modulepreload" as="script">
+<link href="${pageContext.request.contextPath}/viewer/css/chunk-common.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/viewer/css/rino.css" rel="stylesheet">
+</head>
+<body>
+	<section class="dashWrap">
+		<!--main title-->
+<!--		
+		<div class="btn_tab_map_area">
+			<button type="button" class="btn_tab_map active" data-tab="tab1">
+				<img src='${pageContext.request.contextPath}/image/page/smartWeaponMgt/icon/icon_map_car.png'>
+			</button>
+			<button type="button" class="btn_tab_map" data-tab="tab2">
+				<img src='${pageContext.request.contextPath}/image/page/smartWeaponMgt/icon/icon_map_wearable.png'>
+			</button>
+		</div>
+-->
+		<div class="status_info graph_wrap" id="tab1">
+			<section class="dash_area">
+				<div class="map_left">
+					<div class="map_frame"></div>
+				</div>
+				<div class="map_right">
+					<div class="map_right_top">
+						<div class="map_title">
+							외부 운행차량 현황 <span>Vehicle</span>
+						</div>
+						<div class="map_frame">
+							<div class="map_car">
+								<div class="car_box">
+									<header class="box_header car_color1">전체</header>
+									<div class="box_inner">001</div>
+								</div>
+								<div class="car_box">
+									<header class="box_header car_color2">지휘차량</header>
+									<div class="box_inner">000</div>
+								</div>
+								<div class="car_box">
+									<header class="box_header car_color3">작전차량</header>
+									<div class="box_inner">001</div>
+								</div>
+								<div class="car_box">
+									<header class="box_header car_color4">운반차량</header>
+									<div class="box_inner">000</div>
+								</div>
+								<div class="car_box cblue">
+									<header class="box_header car_color5">통신차량</header>
+									<div class="box_inner">000</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="map_right_down">
+            <div class="map_frame">
+              <div class="map_subtitle">운행차량 목록</div>
+              <div class="map_scroll">
+								<div class="total_list_area_map_wearable">
+									<header class="total_list_header">
+										<div class="total_head">No</div>
+										<div class="total_head">차량번호</div>
+										<div class="total_head">시동시간</div>
+										<div class="total_head">정지시간</div>
+									</header>
+									<div class="total_list_body">
+									</div>
+								</div>
+							</div>
+              </div>
+            </div>
+			</section>
+		</div>
+		<!--content start-->
+
+	</section>
+
+	<script>
+		//지도 폼 셋팅
+		var RINO_GIS_SERVER = '${rgsv_url}';
+	
+		var para = document.location.href.split('/');
+		var mapId = para[para.length - 1] && para[para.length - 1] != '' ? para[para.length - 1] : 1;
+		var mainURL = window.location.protocol + '//' + window.location.host;
+		var serverURL = mainURL + '/rgsv';
+		var webURL = mainURL + '/rgweb';
+		var webURL = '/rgmg';
+		var mapElement = document.createElement('div');
+		mapElement.id = 'rino-map';
+		mapElement.setAttribute('data-rino-map', mapId);
+		mapElement.setAttribute('data-rino-gis-server', serverURL);
+		mapElement.setAttribute('data-rino-gis-web', webURL);
+		mapElement.setAttribute('data-rino-gis-message', webURL);
+	
+		document.querySelector(".map_frame").appendChild(mapElement);
+		//지도 폼 셋팅 - 끝
+	
+		var map;
+		window.addEventListener('rino-map-mounted', function(e) {
+			console.log(e, rinoGIS);
+			map = window.rinoGIS.get('map');
+	
+			//클러스터 레이어 초기화
+			clusterController.initialize();
+	
+			//피처 선택
+			layerController.featureSelected();
+			
+			//현황 리스트 조회
+			statusControll.initialize();
+			
+			//현황 리스트 갱신
+			statusControll.refresh();
+		});
+	</script>
+	<script type="module" src="/rgweb/viewer/js/chunk-vendors.js"></script>
+	<script type="module" src="/rgweb/viewer/js/chunk-common.js"></script>
+	<script type="module" src="/rgweb/viewer/js/rino.js"></script>
+	<script>
+		!function() {
+			var e = document, t = e.createElement("script");
+			if (!("noModule" in t) && "onbeforeload" in t) {
+				var n = !1;
+				e.addEventListener("beforeload", function(e) {
+					if (e.target === t)
+						n = !0;
+					else if (!e.target.hasAttribute("nomodule") || !n)
+						return;
+					e.preventDefault()
+				}, !0), t.type = "module", t.src = ".", e.head.appendChild(t),
+						t.remove()
+			}
+		}();
+	</script>
+	<script src="/rgweb/viewer/js/chunk-vendors-legacy.js" nomodule></script>
+	<script src="/rgweb/viewer/js/chunk-common-legacy.js" nomodule></script>
+	<script src="/rgweb/viewer/js/rino-legacy.js" nomodule></script>
+
+	<script src="${pageContext.request.contextPath}/component/jquery/jquery-3.3.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/component/jquery/jquery-ui.js"></script>
+	<script src="${pageContext.request.contextPath}/component/bootstrap/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="${pageContext.request.contextPath}/component/jquery/jquery.selectric.js"></script>
+	<script src="${pageContext.request.contextPath}/component/ol/ol5.3.js"></script>
+	
+	<script src="${pageContext.request.contextPath}/common/js/topBar.js"></script>
+	<script src="${pageContext.request.contextPath}/common/js/common.js"></script>
+	
+	<!-- 지도 추가 후 설정 -->
+	<script src="${pageContext.request.contextPath}/vehicle/js/map/cluster.js"></script>
+	<script src="${pageContext.request.contextPath}/vehicle/js/map/layer.js"></script>
+	<script src="${pageContext.request.contextPath}/vehicle/js/map/history.js"></script>
+	<script src="${pageContext.request.contextPath}/vehicle/js/info/status.js"></script>
+</body>
+</html>
