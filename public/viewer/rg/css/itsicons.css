@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "ITS";
+  src: url("../fonts/dingbaticons-font.ttf?v=3.5.95") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.its {
+  font-family: "ITS";
+  width: 28px;
+  height: 28px;
+  font-size: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 0.7;
+  color: #ffffff;
+  text-align: center;
+}
+
+.its-cctv:before {
+  content: "a";
+}
+
+.its-vms:before {
+  content: "b";
+}
+
+.its-rse:before {
+  content: "c";
+}
+
+.its-tms:before {
+  content: "d";
+}
+
+.its-avi:before {
+  content: "e";
+}
+
+.its-vds:before {
+  content: "f";
+}
+
+.its-accident:before {
+  content: "g";
+}
+
+.its-construction:before {
+  content: "h";
+}
+
+.its-event:before {
+  content: "i";
+}
+
+.its-outbreak:before {
+  content: "j";
+}
+
+.its-tunnel:before {
+  content: "k";
+}
+
+.its-bridge:before {
+  content: "l";
+}
+
+.its-sleepiness-rest-area:before {
+  content: "m";
+}
+
+.its-face-slope:before {
+  content: "n";
+}
+
+.its-overspeed-regulation:before {
+  content: "o";
+}
+
+.its-sea-bridge:before {
+  content: "p";
+}
+
+.its-slide:before {
+  content: "q";
+}
+
+.its-fog:before {
+  content: "r";
+}
+
+.its-snow-removal:before {
+  content: "s";
+}
+
+.its-accident-risk:before {
+  content: "t";
+}
+
+.its-weather:before {
+  content: "u";
+}
+
+.its-colr-error {
+  background-color: #fd4048;
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}

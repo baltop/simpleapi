@@ -1,0 +1,1424 @@
+@charset "utf-8";
+@import url('../../common.css');
+
+/*Basic*/
+html,
+body,
+#wrapGis {
+	height: 100%;
+}
+body {
+	font-size: 14px;
+	font-family: 'nanum', '돋움', 'Dotum', Arial, AppleGothic, Sans-Serif;
+	color: rgba(102, 102, 102, 1) /*#666*/;
+}
+#wrapGis {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	min-width: 800px;
+	height: 100%;
+}
+.tpFdClmn {
+	flex-direction: column !important;
+}
+
+/*Basic : Form Element*/
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='file'],
+.input,
+.areaIcoInput,
+select,
+textarea {
+	padding: 0.1em 0.6em;
+	border: 1px solid rgba(214, 214, 214, 1);
+	background-color: rgba(255, 255, 255, 2);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1) inset;
+	-o-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1) inset;
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='file'],
+.input,
+.areaIcoInput,
+select {
+	height: 2.45em;
+}
+.input,
+.areaIcoInput {
+	display: inline-block;
+}
+input:invalid,
+select:invalid,
+textarea:invalid,
+textarea:invalid.lined {
+	border: 1px solid red;
+	color: red;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(255, 0, 0, 0.2) inset;
+	-moz-box-shadow: 0px 1px 4px 0px rgba(255, 0, 0, 0.2) inset;
+	-o-box-shadow: 0px 1px 4px 0px rgba(255, 0, 0, 0.2) inset;
+	box-shadow: 0px 1px 4px 0px rgba(255, 0, 0, 0.2) inset;
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+input[readonly],
+input[readonly='readonly'],
+input:disabled,
+select:disabled,
+textarea:disabled {
+	color: #999;
+	background: #eee !important;
+}
+input[type='checkbox'],
+input[type='radio'] {
+	display: none;
+}
+input[type='checkbox'] + label,
+input[type='radio'] + label {
+	display: inline-block;
+	height: 14px;
+	padding-left: 20px;
+	line-height: 14px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	cursor: pointer;
+}
+input[type='checkbox'] + label {
+	background-image: url('../basic/images/bgCb.png');
+}
+input[type='radio'] + label {
+	background-image: url('../basic/images/bgRd.png');
+}
+input[type='number'],
+input.number {
+	text-align: right;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+}
+select {
+	padding-right: 1.9em;
+	background: url('images/icoArwSlct.png') no-repeat right center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+select::-ms-expand {
+	display: none;
+}
+
+/*[추가:20201124]*/
+input.tpLL {
+	width: 110px;
+	text-align: right;
+}
+
+/*Input[width Icon]*/
+.areaIcoInput {
+	padding: 0;
+}
+.areaIcoInput.w100p > input {
+	width: calc(100% - 36px);
+}
+.areaIcoInput > input.tpIco {
+	padding-right: 0;
+	border: none;
+	background: none;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	-o-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.areaIcoInput.tpClnd > input.tpIco {
+	width: 12.5em;
+} /*0000-00-00 00:00:00*/
+.areaIcoInput.tpClnd > input.tpIco.tpYmd {
+	width: 8em;
+} /*0000-00-00 00:00:00*/
+.areaIcoInput > .elmIco {
+	display: inline-block;
+	width: 2.45em;
+	height: 100%;
+	margin-left: -4px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.areaIcoInput.tpSrch > .elmIco {
+	background-image: url('images/icoInptSrch.png');
+}
+.areaIcoInput.tpClnd > .elmIco {
+	background-image: url('images/icoInptClnd.png');
+}
+
+/*Input[width Icon][Reference List]*/
+.areaIcoInput.tpJKey {
+	position: relative;
+	padding: 0;
+}
+.areaIcoInput.tpJKey > .areaRfrnLst {
+	display: none;
+	position: absolute;
+	top: 2.2em;
+	width: 100%;
+	min-height: 2.45em;
+	padding: 0.1em 0;
+	border: 1px solid rgba(214, 214, 214, 0.5);
+	background-color: rgba(255, 255, 255, 0.95);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-bottom-left-radius: 3px;
+	-moz-border-bottom-right-radius: 3px;
+	-o-border-bottom-left-radius: 3px;
+	-o-border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	-o-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.lstRfrn {
+}
+.lstRfrn li {
+	padding: 0.5em 0.6em;
+	cursor: pointer;
+}
+.lstRfrn li:hover,
+.lstRfrn li:active,
+.lstRfrn li.active {
+	background-color: rgba(214, 214, 214, 0.3);
+}
+
+/*Button*/
+.areaBtn {
+	display: block;
+	padding: 15px 0 5px 0;
+}
+.button {
+	display: inline-block;
+	height: 32px;
+	padding: 0 15px;
+	margin-right: 2px;
+	line-height: 32px;
+	font-family: 'nanumB';
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(0, 0, 0, 1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 3em;
+	-moz-border-radius: 3em;
+	-o-border-radius: 3em;
+	border-radius: 3em;
+	-webkit-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.areaBtn.txtC > .button {
+	margin: 0;
+	margin: 0 2px;
+}
+.areaBtn.txtR > .button {
+	margin: 0;
+	margin-left: 4px;
+}
+.button.tpImp {
+	background-color: rgba(255, 55, 22, 1) /*#ff3716*/;
+	-webkit-box-shadow: 0px 2px 5px 2px rgba(255, 55, 22, 0.2);
+	-moz-box-shadow: 0px 2px 5px 2px rgba(255, 55, 22, 0.2);
+	-o-box-shadow: 0px 2px 5px 2px rgba(255, 55, 22, 0.2);
+	box-shadow: 0px 2px 5px 2px rgba(255, 55, 22, 0.2);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.button.tpNAct {
+	color: rgba(166, 166, 166, 1) /*#a6a6a6*/;
+	background-color: rgba(239, 239, 239, 1) /*#efefef*/;
+	-webkit-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+/*[추가:20201124]*/
+.button.tpVAlnM {
+	vertical-align: middle;
+}
+.button:hover,
+.button:active {
+	color: rgba(255, 255, 255, 1);
+}
+.button.tpNSdw {
+	-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	-moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	-o-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.button.tpNAct:hover,
+.button.tpNAct:active {
+	color: rgba(166, 166, 166, 1) /*#a6a6a6*/;
+}
+.button.h28 {
+	height: 28px;
+	line-height: 28px;
+}
+.button.h24 {
+	height: 24px;
+	line-height: 24px;
+}
+.button.h20 {
+	height: 20px;
+	padding: 0 12px;
+	line-height: 20px;
+}
+.button.t12 {
+	font-size: 12px;
+}
+
+/*Map*/
+.mapContent {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*[추가:20201030]Map > Point of Line(시점/종점)*/
+.areaPntL {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0.25em 0.85em 0.25em 0.25em;
+	border-width: 2px;
+	border-style: solid;
+	font-size: 14px;
+	font-family: 'nanumB';
+	background-color: rgba(255, 255, 255, 1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-o-border-radius: 1em;
+	border-radius: 1em;
+	-webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.areaPntL.tpStart {
+	border-color: rgba(0, 0, 251, 1) /*#0000fb*/;
+}
+.areaPntL.tpEnd {
+	border-color: rgba(255, 55, 22, 1) /*#ff3716*/;
+}
+.areaPntL > .areaItem {
+	padding: 0.25em 0.5em;
+	color: rgba(255, 255, 255, 1);
+	-webkit-border-radius: 0.7em;
+	-moz-border-radius: 0.7em;
+	-o-border-radius: 0.7em;
+	border-radius: 0.7em;
+}
+.areaPntL.tpStart > .areaItem {
+	background-color: rgba(0, 0, 251, 1) /*#0000fb*/;
+}
+.areaPntL.tpEnd > .areaItem {
+	background-color: rgba(255, 55, 22, 1) /*#ff3716*/;
+}
+.areaPntL > .areaPntNm {
+	padding-left: 0.3em;
+	font-size: 1.1em;
+	color: rgba(80, 80, 80, 1);
+}
+
+/*Map > ToolTip*/
+.areaTTip {
+	z-index: 500;
+	position: absolute;
+	max-width: 300px;
+	padding: 7px 12px;
+	font-size: 12px;
+	line-height: 135%;
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(102, 102, 102, 0.95) /*#666*/;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+
+/*Map > Context*/
+.areaCntxt {
+	z-index: 600;
+	position: absolute;
+	padding: 10px 0 9px 0;
+	font-size: 12px;
+	border: 1px solid rgba(166, 166, 166, 1) /*#a6a6a6*/;
+	background-color: rgba(239, 239, 239, 1) /*#efefef*/;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.lstCntxt {
+	margin: 5px 0;
+	border-bottom: 1px solid rgba(214, 214, 214, 1) /*#d6d6d6*/;
+}
+.lstCntxt:last-child {
+	border: none;
+}
+.lstCntxt > li {
+	margin: 2px 4px;
+}
+.lstCntxt > li > a {
+	display: inline-block;
+	padding: 1px 14px 2px 14px;
+}
+.lstCntxt > li > a:hover,
+.lstCntxt > li > a:active,
+.lstCntxt > li > a.active {
+	background-color: rgba(166, 166, 166, 0.9) /*#a6a6a6*/;
+}
+
+/*Map > Info Layer[Basic]*/
+.areaILyr {
+	max-width: 1000px;
+	padding: 16px 18px 20px 18px;
+	background-color: rgba(255, 255, 255, 1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.areaILyr > .areaHd {
+	overflow: hidden;
+	position: relative;
+	height: 33px;
+	border-bottom: 1px solid rgba(214, 214, 214, 1) /*#d6d6d6*/;
+}
+.areaILyr > .areaHd > .areaTit {
+	overflow: hidden;
+	width: 100%;
+	padding: 3px 30px 0 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.areaILyr > .areaHd > .areaTit > .txtTit {
+	font-size: 16px;
+	font-family: 'nanumE';
+}
+.areaILyr > .areaHd > .areaBtnCls {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 18px;
+	height: 18px;
+	background: url('images/btnCls_infolyr.png') no-repeat center center;
+	cursor: pointer;
+}
+.areaILyr > .areaCntt {
+	padding-top: 15px;
+}
+
+/*Map > Info table[Info]*/
+.tblInfo {
+	border-spacing: 0;
+	border-collapse: separate;
+}
+.tblInfo tr th,
+.tblInfo tr td {
+	padding: 5px;
+	line-height: 140%;
+	text-align: left;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.tblInfo tr th > .itemNm {
+	font-weight: normal;
+	font-family: 'nanumB';
+}
+.tblInfo .txtCln {
+	padding-right: 5px;
+}
+.tblInfo .txtCln:before {
+	content: ':';
+}
+/*Map > Info table[None Board]*/
+.tblInfo.tpNoBrd tr th,
+.tblInfo.tpNoBrd tr td {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.tblInfo.tpNoBrd tr th {
+}
+
+/*ToolBox*/
+.grpTBox {
+	position: absolute;
+	display: inline-flex;
+}
+.grpTBox.tpTop {
+	top: 10px;
+}
+.grpTBox.tpBtm:not(.tpFdClmn) {
+	bottom: 10px;
+	align-items: flex-end;
+}
+.grpTBox.tpLft {
+	left: 10px;
+}
+.grpTBox.tpRgt {
+	right: 10px;
+}
+.grpTBox.tpCntr {
+	left: 50%;
+}
+.grpTBox.tpMdl {
+	top: 50%;
+}
+.grpTBox.tpTop.tpTgth {
+	top: 69px;
+}
+.grpTBox.tpBtm.tpTgth {
+	bottom: 69px;
+}
+
+.areaBtnTool,
+.areaGrpToolBtn {
+	position: relative;
+	margin: 5px;
+	vertical-align: middle;
+}
+.grpTBox.tpRgt > .areaBtnTool {
+	text-align: right;
+}
+.grpTBox.tpFdClmn .areaBtnTool {
+}
+
+/*ToolBox > ToolButton*/
+.btnTool {
+	z-index: 120;
+	overflow: hidden;
+	display: inline-block;
+	height: 36px;
+	padding: 0 12px;
+	line-height: 36px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.btnTool:hover,
+.btnTool:active,
+.btnTool.active,
+.btnTTool:hover,
+.btnTTool:active,
+.btnTTool.active {
+	color: #fff;
+}
+
+/*ToolBox > ToolButton[Common]*/
+.btnTool,
+.areaGrpToolBtn > .inner,
+.grpTglTool {
+	position: relative;
+	background-color: rgba(255, 255, 255, 1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+
+/*ToolBox > ToolButton[Group]*/
+.areaGrpToolBtn {
+	display: inline-block;
+}
+.grpTBox.tpRgt .areaGrpToolBtn {
+	text-align: right;
+}
+.areaGrpToolBtn > .inner {
+	display: inline-flex;
+	position: relative;
+}
+.tpFdClmn .areaGrpToolBtn > .inner {
+	flex-direction: column;
+}
+.areaGrpToolBtn .areaBtnTool {
+	margin: 0;
+}
+.areaGrpToolBtn .areaBtnTool > .btnTool {
+	display: block;
+	border-right: 1px solid #dbdbdb;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	-o-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.tpFdClmn .areaGrpToolBtn .areaBtnTool > .btnTool {
+	border-right: 0;
+	border-bottom: 1px solid #dbdbdb;
+}
+.areaGrpToolBtn .areaBtnTool:first-child > .btnTool {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-top-left-radius: 5px;
+	-moz-border-top-right-radius: 0px;
+	-moz-border-bottom-left-radius: 5px;
+	-moz-border-bottom-right-radius: 0px;
+	-o-border-top-left-radius: 5px;
+	-o-border-top-right-radius: 0px;
+	-o-border-bottom-left-radius: 5px;
+	-o-border-bottom-right-radius: 0px;
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 0px;
+}
+.areaGrpToolBtn .areaBtnTool:last-child > .btnTool {
+	border: 0;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-top-left-radius: 0px;
+	-moz-border-top-right-radius: 5px;
+	-moz-border-bottom-left-radius: 0px;
+	-moz-border-bottom-right-radius: 5px;
+	-o-border-top-left-radius: 0px;
+	-o-border-top-right-radius: 5px;
+	-o-border-bottom-left-radius: 0px;
+	-o-border-bottom-right-radius: 5px;
+
+	border-top-left-radius: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 5px;
+}
+.tpFdClmn .areaGrpToolBtn .areaBtnTool:first-child > .btnTool {
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-top-left-radius: 5px;
+	-moz-border-top-right-radius: 5px;
+	-moz-border-bottom-left-radius: 0px;
+	-moz-border-bottom-right-radius: 0px;
+	-o-border-top-left-radius: 5px;
+	-o-border-top-right-radius: 5px;
+	-o-border-bottom-left-radius: 0px;
+	-o-border-bottom-right-radius: 0px;
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.tpFdClmn .areaGrpToolBtn .areaBtnTool:last-child > .btnTool {
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-top-left-radius: 0px;
+	-moz-border-top-right-radius: 0px;
+	-moz-border-bottom-left-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	-o-border-top-left-radius: 0px;
+	-o-border-top-right-radius: 0px;
+	-o-border-bottom-left-radius: 5px;
+	-o-border-bottom-right-radius: 5px;
+
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*ToolBox > ToolButton[Icon]*/
+.btnTool.tpIco {
+	overflow: hidden;
+	min-width: 36px !important;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.btnTool.tpIco > .txtTNm {
+	display: none;
+}
+.btnTool.tpIco.tpI_BMap {
+	background-image: url('../basic/images/icoTool/bMap.png');
+}
+.btnTool.tpIco.tpI_BMap:hover,
+.btnTool.tpIco.tpI_BMap:active,
+.btnTool.tpIco.tpI_BMap.active {
+	background-image: url('../basic/images/icoTool/bMap_on.png');
+} /*Background Map:배경지도*/
+.btnTool.tpIco.tpI_Lyr {
+	background-image: url('../basic/images/icoTool/layer.png');
+}
+.btnTool.tpIco.tpI_Lyr:hover,
+.btnTool.tpIco.tpI_Lyr:active,
+.btnTool.tpIco.tpI_Lyr.active {
+	background-image: url('../basic/images/icoTool/layer_on.png');
+} /*Layer:레이어*/
+.btnTool.tpIco.tpI_Move {
+	background-image: url('../basic/images/icoTool/move.png');
+}
+.btnTool.tpIco.tpI_Move:hover,
+.btnTool.tpIco.tpI_Move:active,
+.btnTool.tpIco.tpI_Move.active {
+	background-image: url('../basic/images/icoTool/move_on.png');
+} /*Moving:이동*/
+.btnTool.tpIco.tpI_FScrn {
+	background-image: url('../basic/images/icoTool/fScrn.png');
+}
+.btnTool.tpIco.tpI_FScrn:hover,
+.btnTool.tpIco.tpI_FScrn:active,
+.btnTool.tpIco.tpI_FScrn.active {
+	background-image: url('../basic/images/icoTool/fScrn_on.png');
+} /*Full Screen:전체화면*/
+.btnTool.tpIco.tpI_IScrn {
+	background-image: url('../basic/images/icoTool/iScrn.png');
+}
+.btnTool.tpIco.tpI_IScrn:hover,
+.btnTool.tpIco.tpI_IScrn:active,
+.btnTool.tpIco.tpI_IScrn.active {
+	background-image: url('../basic/images/icoTool/iScrn_on.png');
+} /*Initial Screen:초기화면*/
+.btnTool.tpIco.tpI_SrchLct {
+	background-image: url('../basic/images/icoTool/srchLct.png');
+}
+.btnTool.tpIco.tpI_SrchLct:hover,
+.btnTool.tpIco.tpI_SrchLct:active,
+.btnTool.tpIco.tpI_SrchLct.active {
+	background-image: url('../basic/images/icoTool/srchLct_on.png');
+} /*Searching Location:위치검색*/
+.btnTool.tpIco.tpI_SrchSpc {
+	background-image: url('../basic/images/icoTool/srchSpc.png');
+}
+.btnTool.tpIco.tpI_SrchSpc:hover,
+.btnTool.tpIco.tpI_SrchSpc:active,
+.btnTool.tpIco.tpI_SrchSpc.active {
+	background-image: url('../basic/images/icoTool/srchSpc_on.png');
+} /*Searching Space:공간검색*/
+.btnTool.tpIco.tpI_ZmSld {
+	background-image: url('../basic/images/icoTool/zmSld.png');
+}
+.btnTool.tpIco.tpI_ZmSld:hover,
+.btnTool.tpIco.tpI_ZmSld:active,
+.btnTool.tpIco.tpI_ZmSld.active {
+	background-image: url('../basic/images/icoTool/zmSld_on.png');
+} /*Zoom Slide:줌 슬라이드*/
+.btnTool.tpIco.tpI_CScl {
+	background-image: url('../basic/images/icoTool/cScl.png');
+}
+.btnTool.tpIco.tpI_CScl:hover,
+.btnTool.tpIco.tpI_CScl:active,
+.btnTool.tpIco.tpI_CScl.active {
+	background-image: url('../basic/images/icoTool/cScl_on.png');
+} /*Current Scale:현재축척*/
+.btnTool.tpIco.tpI_CLct {
+	background-image: url('../basic/images/icoTool/cLct.png');
+}
+.btnTool.tpIco.tpI_CLct:hover,
+.btnTool.tpIco.tpI_CLct:active,
+.btnTool.tpIco.tpI_CLct.active {
+	background-image: url('../basic/images/icoTool/cLct_on.png');
+} /*Current Location:현재위치*/
+.btnTool.tpIco.tpI_MvArea {
+	background-image: url('../basic/images/icoTool/mvArea.png');
+}
+.btnTool.tpIco.tpI_MvArea:hover,
+.btnTool.tpIco.tpI_MvArea:active,
+.btnTool.tpIco.tpI_MvArea.active {
+	background-image: url('../basic/images/icoTool/mvArea_on.png');
+} /*Moving Area:영역이동*/
+.btnTool.tpIco.tpI_MvCntr {
+	background-image: url('../basic/images/icoTool/mvCntr.png');
+}
+.btnTool.tpIco.tpI_MvCntr:hover,
+.btnTool.tpIco.tpI_MvCntr:active,
+.btnTool.tpIco.tpI_MvCntr.active {
+	background-image: url('../basic/images/icoTool/mvCntr_on.png');
+} /*Moving Center:중심이동*/
+.btnTool.tpIco.tpI_Edit {
+	background-image: url('../basic/images/icoTool/edit.png');
+}
+.btnTool.tpIco.tpI_Edit:hover,
+.btnTool.tpIco.tpI_Edit:active,
+.btnTool.tpIco.tpI_Edit.active {
+	background-image: url('../basic/images/icoTool/edit_on.png');
+} /*Edit:편집*/
+.btnTool.tpIco.tpI_Sncr {
+	background-image: url('../basic/images/icoTool/sncr.png');
+}
+.btnTool.tpIco.tpI_Sncr:hover,
+.btnTool.tpIco.tpI_Sncr:active,
+.btnTool.tpIco.tpI_Sncr.active {
+	background-image: url('../basic/images/icoTool/sncr_on.png');
+} /*Synchronization:동기화*/
+.btnTool.tpIco.tpI_ZmIn {
+	background-image: url('../basic/images/icoTool/zmIn.png');
+}
+.btnTool.tpIco.tpI_ZmIn:hover,
+.btnTool.tpIco.tpI_ZmIn:active,
+.btnTool.tpIco.tpI_ZmIn.active {
+	background-image: url('../basic/images/icoTool/zmIn_on.png');
+} /*Zoom In:확대*/
+.btnTool.tpIco.tpI_ZmOut {
+	background-image: url('../basic/images/icoTool/zmOut.png');
+}
+.btnTool.tpIco.tpI_ZmOut:hover,
+.btnTool.tpIco.tpI_ZmOut:active,
+.btnTool.tpIco.tpI_ZmOut.active {
+	background-image: url('../basic/images/icoTool/zmOut_on.png');
+} /*Zoom Out:축소*/
+.btnTool.tpIco.tpI_Draw {
+	background-image: url('../basic/images/icoTool/draw.png');
+}
+.btnTool.tpIco.tpI_Draw:hover,
+.btnTool.tpIco.tpI_Draw:active,
+.btnTool.tpIco.tpI_Draw.active {
+	background-image: url('../basic/images/icoTool/draw_on.png');
+} /*Draw:그리기*/
+.btnTool.tpIco.tpI_Msr {
+	background-image: url('../basic/images/icoTool/msr.png');
+}
+.btnTool.tpIco.tpI_Msr:hover,
+.btnTool.tpIco.tpI_Msr:active,
+.btnTool.tpIco.tpI_Msr.active {
+	background-image: url('../basic/images/icoTool/msr_on.png');
+} /*Measurement:측정*/
+.btnTool.tpIco.tpI_DMIntl {
+	background-image: url('../basic/images/icoTool/dmIntl.png');
+}
+.btnTool.tpIco.tpI_DMIntl:hover,
+.btnTool.tpIco.tpI_DMIntl:active,
+.btnTool.tpIco.tpI_DMIntl.active {
+	background-image: url('../basic/images/icoTool/dmIntl_on.png');
+} /*Initialization:그리기, 측정 > 초기화*/
+.btnTool.tpIco.tpI_DPnt {
+	background-image: url('../basic/images/icoTool/dPnt.png');
+}
+.btnTool.tpIco.tpI_DPnt:hover,
+.btnTool.tpIco.tpI_DPnt:active,
+.btnTool.tpIco.tpI_DPnt.active {
+	background-image: url('../basic/images/icoTool/dPnt_on.png');
+} /*Point:그리기 > 점*/
+.btnTool.tpIco.tpI_DLine {
+	background-image: url('../basic/images/icoTool/dLine.png');
+}
+.btnTool.tpIco.tpI_DLine:hover,
+.btnTool.tpIco.tpI_DLine:active,
+.btnTool.tpIco.tpI_DLine.active {
+	background-image: url('../basic/images/icoTool/dLine_on.png');
+} /*Line:그리기 > 선*/
+.btnTool.tpIco.tpI_DFace {
+	background-image: url('../basic/images/icoTool/dFace.png');
+}
+.btnTool.tpIco.tpI_DFace:hover,
+.btnTool.tpIco.tpI_DFace:active,
+.btnTool.tpIco.tpI_DFace.active {
+	background-image: url('../basic/images/icoTool/dFace_on.png');
+} /*Face:그리기 > 면*/
+.btnTool.tpIco.tpI_DRect {
+	background-image: url('../basic/images/icoTool/dRect.png');
+}
+.btnTool.tpIco.tpI_DRect:hover,
+.btnTool.tpIco.tpI_DRect:active,
+.btnTool.tpIco.tpI_DRect.active {
+	background-image: url('../basic/images/icoTool/dRect_on.png');
+} /*Rectangle:그리기 > 사각형*/
+.btnTool.tpIco.tpI_DCrcl {
+	background-image: url('../basic/images/icoTool/dCrcl.png');
+}
+.btnTool.tpIco.tpI_DCrcl:hover,
+.btnTool.tpIco.tpI_DCrcl:active,
+.btnTool.tpIco.tpI_DCrcl.active {
+	background-image: url('../basic/images/icoTool/dCrcl_on.png');
+} /*Circle :그리기 > 원*/
+.btnTool.tpIco.tpI_DTxt {
+	background-image: url('../basic/images/icoTool/dTxt.png');
+}
+.btnTool.tpIco.tpI_DTxt:hover,
+.btnTool.tpIco.tpI_DTxt:active,
+.btnTool.tpIco.tpI_DTxt.active {
+	background-image: url('../basic/images/icoTool/dTxt_on.png');
+} /*Text:그리기 > 글자*/
+.btnTool.tpIco.tpI_MDstn {
+	background-image: url('../basic/images/icoTool/mDstn.png');
+}
+.btnTool.tpIco.tpI_MDstn:hover,
+.btnTool.tpIco.tpI_MDstn:active,
+.btnTool.tpIco.tpI_MDstn.active {
+	background-image: url('../basic/images/icoTool/mDstn_on.png');
+} /*Distance:측정 > 거리*/
+.btnTool.tpIco.tpI_MArea {
+	background-image: url('../basic/images/icoTool/mArea.png');
+}
+.btnTool.tpIco.tpI_MArea:hover,
+.btnTool.tpIco.tpI_MArea:active,
+.btnTool.tpIco.tpI_MArea.active {
+	background-image: url('../basic/images/icoTool/mArea_on.png');
+} /*Area:측정 > 면적*/
+
+.btnTool.tpIco.tpI_SLAdrs {
+	background-image: url('../basic/images/icoTool/sLAdrs.png');
+}
+.btnTool.tpIco.tpI_SLAdrs:hover,
+.btnTool.tpIco.tpI_SLAdrs:active,
+.btnTool.tpIco.tpI_SLAdrs.active {
+	background-image: url('../basic/images/icoTool/sLAdrs_on.png');
+} /*Address:위치검색 > 주소*/
+.btnTool.tpIco.tpI_SLNm {
+	background-image: url('../basic/images/icoTool/sLNm.png');
+}
+.btnTool.tpIco.tpI_SLNm:hover,
+.btnTool.tpIco.tpI_SLNm:active,
+.btnTool.tpIco.tpI_SLNm.active {
+	background-image: url('../basic/images/icoTool/sLNm_on.png');
+} /*Nm:위치검색 > 명칭*/
+.btnTool.tpIco.tpI_SSArea {
+	background-image: url('../basic/images/icoTool/sSArea.png');
+}
+.btnTool.tpIco.tpI_SSArea:hover,
+.btnTool.tpIco.tpI_SSArea:active,
+.btnTool.tpIco.tpI_SSArea.active {
+	background-image: url('../basic/images/icoTool/sSArea_on.png');
+} /*Area:공간검색 > 영역*/
+
+.btnTool.tpIco.tpI_SSSrnd {
+	background-image: url('../basic/images/icoTool/sSSrnd.png');
+}
+.btnTool.tpIco.tpI_SSSrnd:hover,
+.btnTool.tpIco.tpI_SSSrnd:active,
+.btnTool.tpIco.tpI_SSSrnd.active {
+	background-image: url('../basic/images/icoTool/sSSrnd_on.png');
+} /*Area:공간검색 > 주변*/
+
+/*ToolButton[Toggle]*/
+.grpTglTool {
+	height: 36px;
+	padding: 2px;
+}
+.btnTTool {
+	display: inline-block;
+	height: 100%;
+	padding: 0 12px;
+	line-height: 32px;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+.btnTTool:hover,
+.btnTTool:active,
+.btnTTool.active {
+	-webkit-box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.1) inset;
+	-o-box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.1) inset;
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+
+/*ToolBox > 2Depth Layer*/
+.lyrTool2D {
+	position: absolute;
+	text-align: left;
+	white-space: nowrap;
+	background-color: rgba(255, 255, 255, 1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+	-o-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.lyrTool2D > .inner {
+	display: flex;
+}
+.grpTBox.tpTop .areaBtnTool > .lyrTool2D,
+.grpTBox.tpTop.tpFdClmn
+	.areaGrpToolBtn:not(.tpFdClmn)
+	.areaBtnTool
+	> .lyrTool2D,
+.grpTBox.tpMdl.tpFdClmn
+	.areaGrpToolBtn:not(.tpFdClmn)
+	.areaBtnTool
+	> .lyrTool2D {
+	top: 44px;
+}
+.grpTBox.tpBtm:not(.tpFdClmn) .areaBtnTool > .lyrTool2D,
+.grpTBox.tpBtm.tpFdClmn
+	.areaGrpToolBtn:not(.tpFdClmn)
+	.areaBtnTool
+	> .lyrTool2D {
+	bottom: 44px;
+}
+.grpTBox.tpLft:not(.tpFdClmn) .areaBtnTool > .lyrTool2D {
+	left: 0;
+}
+.grpTBox.tpRgt:not(.tpFdClmn) .areaBtnTool > .lyrTool2D,
+.grpTBox.tpRgt .areaGrpToolBtn:not(.tpFdClmn) .areaBtnTool > .lyrTool2D {
+	right: 0;
+}
+.grpTBox.tpTop.tpFdClmn .areaBtnTool > .lyrTool2D,
+.grpTBox.tpMdl.tpFdClmn .areaBtnTool > .lyrTool2D,
+.grpTBox.tpTop .areaGrpToolBtn.tpFdClmn .areaBtnTool > .lyrTool2D,
+.grpTBox.tpMdl .areaGrpToolBtn.tpFdClmn .areaBtnTool > .lyrTool2D {
+	top: 0;
+}
+.grpTBox.tpBtm.tpFdClmn .areaBtnTool > .lyrTool2D,
+.grpTBox.tpBtm .areaGrpToolBtn.tpFdClmn .areaBtnTool > .lyrTool2D {
+	bottom: 0;
+}
+
+.lyrTool2D .areaBtnTool {
+	margin: 0;
+	text-align: center;
+}
+.lyrTool2D .btnTool {
+	background-color: rgba(255, 255, 255, 0);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	-o-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+/*.lyrTool2D .inner:not(.tpFdClmn) .btnTool:not(.tpIco){border-right:1px solid rgba(214, 214, 214, 1.0);}*/
+.lyrTool2D .inner:not(.tpFdClmn) .areaBtnTool {
+	border-right: 1px solid rgba(214, 214, 214, 1);
+}
+/*.lyrTool2D .inner.tpFdClmn .btnTool:not(.tpIco){border-bottom:1px solid rgba(214, 214, 214, 1.0);}*/
+.lyrTool2D .inner.tpFdClmn .areaBtnTool {
+	width: 100%;
+	border-bottom: 1px solid rgba(214, 214, 214, 1);
+}
+.lyrTool2D .inner .areaBtnTool:last-child {
+	border: 0;
+}
+.lyrTool2D .btnTool:hover,
+.lyrTool2D .btnTool:active,
+.lyrTool2D .btnTool.active {
+	color: rgba(0, 0, 0, 1) !important;
+}
+
+.lyrTool2D > .inner > .sectionBsc {
+	padding: 11px 13px;
+	max-height: 500px;
+	overflow-y: auto;
+}
+/*[추가:20201030]*/
+.lyrTool2D > .inner > .sectionBsc.tpTinyPdd {
+	padding: 10px;
+}
+
+/*ToolBox > 2Depth Layer > List[Select Radio & Checkbox]*/
+.lstSlctRnC {
+}
+.lstSlctRnC > li {
+	position: relative;
+	padding: 7px 1px;
+}
+.lstSlctRnC > li:first-child {
+	padding-top: 1px;
+}
+.lstSlctRnC > li:last-child {
+	padding-bottom: 1px;
+}
+
+/*ToolBox > 2Depth Layer > List[Select Radio & Checkbox][Togather Button]*/
+.lstSlctRnC.tpTgthBtn {
+}
+.lstSlctRnC.tpTgthBtn > li {
+	padding-right: 85px;
+}
+.lstSlctRnC > li:first-child {
+	padding-top: 7px;
+}
+.lstSlctRnC > li:last-child {
+	padding-bottom: 7px;
+}
+.lstSlctRnC.tpTgthBtn > li > .button {
+	position: absolute;
+	right: 0;
+	top: 4px;
+}
+
+/*ToolBox > 2Depth Layer[Image Button]*/
+.lyrTool2D .btnTool.tpIco.tpI_DMIntl {
+	background-image: url('../basic/images/icoTool/dmIntl_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_DMIntl:hover,
+.lyrTool2D .btnTool.tpIco.tpI_DMIntl:active,
+.lyrTool2D .btnTool.tpIco.tpI_DMIntl.active {
+	background-image: url('../basic/images/icoTool/dmIntl_2d_on.png');
+} /*Initialization:그리기, 측정 > 초기화*/
+.lyrTool2D .btnTool.tpIco.tpI_DPnt {
+	background-image: url('../basic/images/icoTool/dPnt_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_DPnt:hover,
+.lyrTool2D .btnTool.tpIco.tpI_DPnt:active,
+.lyrTool2D .btnTool.tpIco.tpI_DPnt.active {
+	background-image: url('../basic/images/icoTool/dPnt_2d_on.png');
+} /*Point:그리기 > 점*/
+.lyrTool2D .btnTool.tpIco.tpI_DLine {
+	background-image: url('../basic/images/icoTool/dLine_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_DLine:hover,
+.lyrTool2D .btnTool.tpIco.tpI_DLine:active,
+.lyrTool2D .btnTool.tpIco.tpI_DLine.active {
+	background-image: url('../basic/images/icoTool/dLine_2d_on.png');
+} /*Line:그리기 > 선*/
+.lyrTool2D .btnTool.tpIco.tpI_DFace {
+	background-image: url('../basic/images/icoTool/dFace_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_DFace:hover,
+.lyrTool2D .btnTool.tpIco.tpI_DFace:active,
+.lyrTool2D .btnTool.tpIco.tpI_DFace.active {
+	background-image: url('../basic/images/icoTool/dFace_2d_on.png');
+} /*Face:그리기 > 면*/
+.lyrTool2D .btnTool.tpIco.tpI_DRect {
+	background-image: url('../basic/images/icoTool/dRect_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_DRect:hover,
+.lyrTool2D .btnTool.tpIco.tpI_DRect:active,
+.lyrTool2D .btnTool.tpIco.tpI_DRect.active {
+	background-image: url('../basic/images/icoTool/dRect_2d_on.png');
+} /*Rectangle:그리기 > 사각형*/
+.lyrTool2D .btnTool.tpIco.tpI_DCrcl {
+	background-image: url('../basic/images/icoTool/dCrcl_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_DCrcl:hover,
+.lyrTool2D .btnTool.tpIco.tpI_DCrcl:active,
+.lyrTool2D .btnTool.tpIco.tpI_DCrcl.active {
+	background-image: url('../basic/images/icoTool/dCrcl_2d_on.png');
+} /*Circle :그리기 > 원*/
+.lyrTool2D .btnTool.tpIco.tpI_DTxt {
+	background-image: url('../basic/images/icoTool/dTxt_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_DTxt:hover,
+.lyrTool2D .btnTool.tpIco.tpI_DTxt:active,
+.lyrTool2D .btnTool.tpIco.tpI_DTxt.active {
+	background-image: url('../basic/images/icoTool/dTxt_2d_on.png');
+} /*Text:그리기 > 글자*/
+.lyrTool2D .btnTool.tpIco.tpI_MDstn {
+	background-image: url('../basic/images/icoTool/mDstn_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_MDstn:hover,
+.lyrTool2D .btnTool.tpIco.tpI_MDstn:active,
+.lyrTool2D .btnTool.tpIco.tpI_MDstn.active {
+	background-image: url('../basic/images/icoTool/mDstn_2d_on.png');
+} /*Distance:측정 > 거리*/
+.lyrTool2D .btnTool.tpIco.tpI_MArea {
+	background-image: url('../basic/images/icoTool/mArea_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_MArea:hover,
+.lyrTool2D .btnTool.tpIco.tpI_MArea:active,
+.lyrTool2D .btnTool.tpIco.tpI_MArea.active {
+	background-image: url('../basic/images/icoTool/mArea_2d_on.png');
+} /*Area:측정 > 면적*/
+.lyrTool2D .btnTool.tpIco.tpI_SLAdrs {
+	background-image: url('../basic/images/icoTool/sLAdrs_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_SLAdrs:hover,
+.lyrTool2D .btnTool.tpIco.tpI_SLAdrs:active,
+.lyrTool2D .btnTool.tpIco.tpI_SLAdrs.active {
+	background-image: url('../basic/images/icoTool/sLAdrs_2d_on.png');
+} /*Address:위치검색 > 주소*/
+.lyrTool2D .btnTool.tpIco.tpI_SLNm {
+	background-image: url('../basic/images/icoTool/sLNm_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_SLNm:hover,
+.lyrTool2D .btnTool.tpIco.tpI_SLNm:active,
+.lyrTool2D .btnTool.tpIco.tpI_SLNm.active {
+	background-image: url('../basic/images/icoTool/sLNm_2d_on.png');
+} /*Nm:위치검색 > 명칭*/
+.lyrTool2D .btnTool.tpIco.tpI_SSArea {
+	background-image: url('../basic/images/icoTool/sSArea_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_SSArea:hover,
+.lyrTool2D .btnTool.tpIco.tpI_SSArea:active,
+.lyrTool2D .btnTool.tpIco.tpI_SSArea.active {
+	background-image: url('../basic/images/icoTool/sSArea_2d_on.png');
+} /*Area:공간검색 > 영역*/
+.lyrTool2D .btnTool.tpIco.tpI_SSSrnd {
+	background-image: url('../basic/images/icoTool/sSSrnd_2d.png');
+}
+.lyrTool2D .btnTool.tpIco.tpI_SSSrnd:hover,
+.lyrTool2D .btnTool.tpIco.tpI_SSSrnd:active,
+.lyrTool2D .btnTool.tpIco.tpI_SSSrnd.active {
+	background-image: url('../basic/images/icoTool/sSSrnd_2d_on.png');
+} /*Surroundings:공간검색 > 주변*/
+
+/*[추가:20201124]ToolBox : 경위도이동*/
+.btnTool.tpIco.tpI_MvLL {
+	background-image: url('../basic/images/icoTool/mvLL.png');
+}
+.btnTool.tpIco.tpI_MvLL:hover,
+.btnTool.tpIco.tpI_MvLL:active,
+.btnTool.tpIco.tpI_MvLL.active {
+	background-image: url('../basic/images/icoTool/mvLL_on.png');
+} /*Layer:레이어*/
+
+/* [추가:20210118] */
+.btnTool.tpIco.tpI_cncl {
+	background-image: url('../basic/images/icoTool/cncl.png');
+}
+.btnTool.tpIco.tpI_cncl:hover,
+.btnTool.tpIco.tpI_cncl:active,
+.btnTool.tpIco.tpI_cncl.active {
+	background-image: url('../basic/images/icoTool/cncl_on.png');
+}
+
+.btnTool.tpIco.tpI_save {
+	background-image: url('../basic/images/icoTool/save.png');
+}
+.btnTool.tpIco.tpI_save:hover,
+.btnTool.tpIco.tpI_save:active,
+.btnTool.tpIco.tpI_save.active {
+	background-image: url('../basic/images/icoTool/save_on.png');
+}
+
+.btnTool.tpIco.tpI_crv {
+	background-image: url('../basic/images/icoTool/crv.png');
+}
+.btnTool.tpIco.tpI_crv:hover,
+.btnTool.tpIco.tpI_crv:active,
+.btnTool.tpIco.tpI_crv.active {
+	background-image: url('../basic/images/icoTool/crv_on.png');
+}
+
+.btnTool.tpIco.tpI_rmrk {
+	background-image: url('../basic/images/icoTool/rmrk.png');
+}
+.btnTool.tpIco.tpI_rmrk:hover,
+.btnTool.tpIco.tpI_rmrk:active,
+.btnTool.tpIco.tpI_rmrk.active {
+	background-image: url('../basic/images/icoTool/rmrk_on.png');
+}
+
+.btnTool.tpIco.tpI_strght {
+	background-image: url('../basic/images/icoTool/strght.png');
+}
+.btnTool.tpIco.tpI_strght:hover,
+.btnTool.tpIco.tpI_strght:active,
+.btnTool.tpIco.tpI_strght.active {
+	background-image: url('../basic/images/icoTool/strght_on.png');
+} /* [추가:20210118] */
+
+.lyrTool2D.tpIcoBtn > ul.lstBtnIco2D > li:first-child {
+	/*padding-top:5px;*/
+}
+.lyrTool2D.tpIcoBtn > ul.lstBtnIco2D > li:last-child {
+	/*padding-bottom:5px;*/
+}
+.lyrTool2D.tpIcoBtn > ul.lstBtnIco2D > li > .btnIco2D > .txtTNm {
+	display: none;
+}
+
+/*ToolBox > 2Depth Layer > Search*/
+.sectionBsc.tpSrch {
+	padding: 0 !important;
+}
+.sectionBsc.tpSrch > .areaSrchHd {
+	padding: 18px 13px 17px 13px;
+	border-bottom: 1px solid rgba(191, 191, 191, 1) /*bfbfbf*/;
+}
+.sectionBsc.tpSrch > .areaSrchHd > .txtItem {
+	display: inline-block;
+	padding-right: 5px;
+	font-family: 'nanumB';
+	vertical-align: middle;
+}
+.sectionBsc.tpSrch > .areaSrchRslt {
+	padding-bottom: 10px;
+	border-top: 1px solid rgba(214, 214, 214, 1);
+	background-color: rgba(247, 247, 247, 1) /*#f7f7f7*/;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-bottom-left-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	-o-border-bottom-left-radius: 5px;
+	-o-border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1) inset,
+		0px 1px 2px 0px rgba(0, 0, 0, 0.15) inset;
+	-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1) inset,
+		0px 1px 2px 0px rgba(0, 0, 0, 0.15) inset;
+	-o-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1) inset,
+		0px 1px 2px 0px rgba(0, 0, 0, 0.15) inset;
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1) inset,
+		0px 1px 2px 0px rgba(0, 0, 0, 0.15) inset;
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.sectionBsc.tpSrch > .areaSrchRslt > .areaHd {
+	padding: 1em 0.9em 0.8em 0.9em;
+}
+.sectionBsc.tpSrch > .areaSrchRslt > .areaHd > .txtTit {
+	font-size: 1.1em;
+	font-family: 'nanumB';
+	color: rgba(65, 65, 65, 1) /*#414141*/;
+}
+.sectionBsc.tpSrch > .areaSrchRslt > .areaHd > .txtCnt {
+	font-size: 0.9em;
+	color: rgba(167, 167, 167, 1) /*#a7a7a7*/;
+}
+.sectionBsc.tpSrch > .areaSrchRslt > .areaCntt {
+	max-height: 270px;
+	overflow-y: auto;
+	scrollbar-face-color: #c1c1c1;
+	scrollbar-shadow-color: #c1c1c1;
+	scrollbar-highlight-color: #c1c1c1;
+	scrollbar-3dlight-color: #f7f7f7;
+	scrollbar-darkshadow-color: #f7f7f7;
+	scrollbar-track-color: #f7f7f7;
+	scrollbar-arrow-color: #c1c1c1;
+}
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt {
+}
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt > li {
+	padding: 0.7em 0.7em;
+	margin: 0.7em 1em;
+	background-color: rgba(255, 255, 255, 1);
+	cursor: pointer;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt > li:first-child {
+	margin-top: 1px;
+}
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt > li:hover,
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt > li:active,
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt > li.active {
+	-webkit-box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.1),
+		0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.1),
+		0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.1),
+		0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.1),
+		0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+} /*h-shadow(우) v-shadow(하) blur(흐림도) spread(퍼짐도) color 위치(기본 | inset)*/
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt > li:last-child {
+	padding-bottom: 1em;
+	border: 0;
+}
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt > li > .txtSRTit {
+	font-family: 'nanumB';
+	color: rgba(65, 65, 65, 1) /*#414141*/;
+}
+.sectionBsc.tpSrch > .areaSrchRslt .lstSrchRslt > li > .txtSRCntt {
+	padding-top: 0.5em;
+	color: rgba(167, 167, 167, 1) /*#a7a7a7*/;
+}
+
+/*[추가:20201030]ToolBox > 2Depth Layer[Group List]*/
+.lstGrp {
+}
+.sectionBsc.tpTinyPdd .lstSlctRnC {
+	padding: 0 3px;
+}
+.lstGrp > li > .areaItemD01 {
+	padding: 6px 12px 5px 12px;
+	margin-top: 8px;
+	font-family: 'nanumB';
+	background-color: rgba(245, 245, 245, 1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+.lstGrp > li:first-child > .areaItemD01 {
+	margin-top: 0;
+	color: rgba(80, 80, 80, 1);
+}
+
+video {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

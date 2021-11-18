@@ -1,0 +1,324 @@
+/*statusGraph style*/
+.dash_area .status_area{
+    width: 100%;
+    height: 91%;
+    border-top: 1px solid #242923;
+}
+
+.dash_area .status_area .status_info{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .status_info.graph_wrap{
+    padding: 32px 0 0 47px;
+}
+.dash_area .status_area .status_info.total_wrap{
+    padding: 50px 0 0 47px;
+}
+.dash_area .status_area .status_info.total_wrap_cc{
+    padding: 50px 0 0 47px;
+}
+.cctv_area .status_area{
+    width: 100%;
+    height: 837px;
+    border-top: 1px solid #242923;
+}
+.cctv_area .status_area .status_info.graph_wrap{
+    width: 100%;
+    height: 100%;
+    padding: 32px 0 0 47px;
+}
+.cctv_area .status_area .status_info.total_wrap{
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 0 47px;
+}
+
+.log_frame{
+    width: 100%;
+    height: 95%;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+    margin-left: -30px;
+}
+.log_chart_frame{
+    width: 100%;
+    height: 95%;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.log_table_frame{
+    width: 92%;
+    height: 96.5%;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.dash_area .status_area .graph_frame{
+    width: 830px;
+    height: 362px;
+    float: left;
+    margin: 0 39px 36px 0;
+}
+
+.dash_area .status_area .graph_frame_top{
+    width: 1700px;
+    height: 362px;
+    float: left;
+    margin: 0 39px 36px 0;
+}
+
+.dash_area .status_area .graph_frame .chart_frame{
+    width: 830px;
+    height: 320px;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+}
+.dash_area .status_area .graph_frame_top .chart_frame{
+    width: 1700px;
+    height: 320px;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+}
+
+.dash_area .status_area .graph_frame .chart_header{
+    width: 100%;
+    height: 49px;
+    border-bottom: 1px solid #373b34;
+    padding-left: 32px;
+    font-family: "NotoSansCJKB";
+    font-size: 22px;
+    letter-spacing: -0.55px;
+    line-height: 2.3;
+    text-align: left;
+}
+.dash_area .status_area .graph_frame_top .chart_header{
+    width: 100%;
+    height: 49px;
+    border-bottom: 1px solid #373b34;
+    padding-left: 32px;
+    font-family: "NotoSansCJKB";
+    font-size: 22px;
+    letter-spacing: -0.55px;
+    line-height: 2.3;
+    text-align: left;
+}
+.dash_area .status_area .graph_frame .chart_header span{
+    font-family: "NotoSansCJKR";
+    font-size: 16px;
+    margin-left: 3px;
+}
+/* map */
+
+.dash_area .map_frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+}
+
+/* mobile */
+.dash_area .status_area .mobile_frame{
+    width: 810px;
+    height: 380px;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+    margin-bottom: 20px;
+}
+
+.dash_area .status_area .mobile_frame_2{
+    width: 810px;
+    height: 320px;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+}
+.dash_area .status_area .mobile_chart_frame{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+}
+.dash_area .status_area .gun_case_top{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+}
+.dash_area .status_area .gun_case_in{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #41473f;
+    margin-bottom: 3px;
+}
+.dash_area .status_area .smart_case_left .smart_case_frame{
+    width: 98%;
+    height: 18%;
+    border-radius: 12px;
+    border: solid 1px #373b34;
+    background-color: #202420;
+    margin-left: 2%;
+    margin-bottom: 4px;
+}
+.dash_area .status_area .smart_case_left .smart_case_frame .case_header{
+    width: 100%;
+    height: 23%;
+    padding-left: 32px;
+    font-family: "NotoSansCJKB";
+    font-size: 20px;
+    letter-spacing: -0.55px;
+    line-height: 2.3;
+    text-align: left;
+    color :rgb(252, 252, 252);
+}
+.dash_area .status_area .smart_case_left .smart_case_frame .case_header .case_name{
+    float: left;
+    width: 50%;
+    height: 22px;
+}
+
+ .smart_case_left .smart_case_frame .case_header .case_status{
+    float: left;
+    width: 40%;
+    height: 22px;
+    text-align: right;
+}
+.dash_area .status_area .case_frame{
+    width: 100%;
+    height: 100px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 15%;
+}
+.smart_case_frame .case_frame .smart_status {
+    width: 10%;
+    height: 20%;
+    float:left;
+    margin-left: 8%;
+    margin-right:3%;
+    margin-top: 4%;
+    font-family: "NotoSansCJKB";
+    font-size: 15px;
+    color :rgb(252, 252, 252);
+}
+
+.log_header{
+    font-family: "NotoSansCJKR";
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10%;
+    color: azure;
+}
+.dash_area .status_area .graph_frame .chart_body{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .log_frame .chart_body{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .mobile_frame .chart_body{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .mobile_frame_2 .chart_body{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .mobile_frame .mobile_chart_body{
+    width: 49%;
+    height: 49%;
+    float: left;
+}.dash_area .status_area .mobile_chart_body2{
+    width: 100%;
+    height: 100%;
+    float: left;
+}.dash_area .status_area .mobile_chart_body2 .chart_in{
+    width: 100%;
+    height: 100%;
+}.dash_area .status_area .mobile_chart_body3{
+    width: 100%;
+    height: 80%;
+    float: left;
+}.dash_area .status_area .mobile_chart_body3 .chart_in{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .graph_frame_top .chart_body{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .mobile_frame .chart_in{
+    width: 100%;
+    height: 80%;
+    margin-top: -5%;
+}
+.dash_area .status_area .graph_frame .chart_frame.bullet_frame .chart_body{
+    height: calc(100% - 49px);
+} 
+.dash_area .status_area .graph_frame_top .chart_frame .bullet_frame .chart_body{
+    height: calc(100% - 49px);
+}
+.dash_area .status_area .graph_frame .chart_in{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .graph_frame_top .chart_in{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .log_left .log_frame .log_inner_frame .log_inner_chart .log_chart_frame .chart_body{
+    height: calc(100% - 49px);
+}
+.dash_area .status_area .log_left .log_frame .log_inner_frame .log_inner_chart2 .log_chart_frame .chart_body{
+    height: calc(100% - 49px);
+}
+.dash_area .status_area .graph_frame .chart_in{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .log_left .log_frame .log_inner_frame .log_inner_chart2 .log_chart_frame .chart_body .chart_in{
+    width: 100%;
+    height: 100%;
+}
+.dash_area .status_area .gun_chart .chart_in{
+    width: 100%;
+    height: 100%;
+}
+
+.dash_area .status_area .mobile_frame .mobile_chart_title{
+    width: 50%;
+    height: 15%;
+    border-radius: 20px;
+    border: solid 1px #6eee0c;
+    background-color: 13,15,11;
+    font-family: "NotoSansCJKB";
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 30%;
+    color:cornsilk;
+}
+
+/*text colors*/
+.dashWrap .tGreen{
+    color: #56a30f;
+}
+.dashWrap .tYellow{
+    color: #d6b41e;
+}

@@ -6,26 +6,26 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/viewer/iLt/Tmplt/eBsc/cPBlue/skin.css">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>rinoGIS Viewer</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/component/bootstrap/bootstrap.min.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/component/jquery/jquery.mCustomScrollbar.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/component/jquery/jquery-ui.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/component/jquery/selectric.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/reset.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/common/css/fontStyle.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/common.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/topBar.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/selectBox.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/statusGraph.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/statusTotal.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/gisWidget.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/wearable/css/cctvPopup.css" />
-<link href="${pageContext.request.contextPath}/viewer/css/chunk-common.css" rel="preload" as="style">
-<link href="${pageContext.request.contextPath}/viewer/css/rino.css" rel="preload" as="style">
-<link href="${pageContext.request.contextPath}/viewer/js/chunk-common.js" rel="modulepreload" as="script">
-<link href="${pageContext.request.contextPath}/viewer/js/chunk-vendors.js" rel="modulepreload" as="script">
-<link href="${pageContext.request.contextPath}/viewer/js/rino.js" rel="modulepreload" as="script">
-<link href="${pageContext.request.contextPath}/viewer/css/chunk-common.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/viewer/css/rino.css" rel="stylesheet">
+<link rel="stylesheet" href="/component/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="/component/jquery/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" href="/component/jquery/jquery-ui.css" />
+<link rel="stylesheet" href="/component/jquery/selectric.css" />
+<link rel="stylesheet" href="/common/css/fontStyle.css" />
+<link rel="stylesheet" href="/common/css/reset.css" />
+<link rel="stylesheet" href="/wearable/css/common.css" />
+<link rel="stylesheet" href="/wearable/css/topBar.css" />
+<link rel="stylesheet" href="/wearable/css/selectBox.css" />
+<link rel="stylesheet" href="/wearable/css/statusGraph.css" />
+<link rel="stylesheet" href="/wearable/css/statusTotal.css" />
+<link rel="stylesheet" href="/wearable/css/gisWidget.css" />
+<link rel="stylesheet" href="/wearable/css/cctvPopup.css" />
+<link rel="stylesheet" href="/viewer/css/chunk-common.css" rel="preload" as="style">
+<link rel="stylesheet" href="/viewer/css/rino.css" rel="preload" as="style">
+<link rel="stylesheet" href="/viewer/js/chunk-common.js" rel="modulepreload" as="script">
+<link rel="stylesheet" href="/viewer/js/chunk-vendors.js" rel="modulepreload" as="script">
+<link rel="stylesheet" href="/viewer/js/rino.js" rel="modulepreload" as="script">
+<link rel="stylesheet" href="/viewer/css/chunk-common.css" >
+<link rel="stylesheet" href="/viewer/css/rino.css" >
 </head>
 <body>
 	<section class="dashWrap">
@@ -136,9 +136,9 @@
 			statusControll.refresh();
 		});
 	</script>
-	<script type="module" src="/rgweb/viewer/js/chunk-vendors.js"></script>
-	<script type="module" src="/rgweb/viewer/js/chunk-common.js"></script>
-	<script type="module" src="/rgweb/viewer/js/rino.js"></script>
+	<script type="module" src="/viewer/js/chunk-vendors.js"></script>
+	<script type="module" src="/viewer/js/chunk-common.js"></script>
+	<script type="module" src="/viewer/js/rino.js"></script>
 	<script>
 		!function() {
 			var e = document, t = e.createElement("script");
@@ -155,24 +155,23 @@
 			}
 		}();
 	</script>
-	<script src="/rgweb/viewer/js/chunk-vendors-legacy.js" nomodule></script>
-	<script src="/rgweb/viewer/js/chunk-common-legacy.js" nomodule></script>
-	<script src="/rgweb/viewer/js/rino-legacy.js" nomodule></script>
+	<script src="/viewer/js/chunk-vendors-legacy.js" nomodule></script>
+	<script src="/viewer/js/chunk-common-legacy.js" nomodule></script>
+	<script src="/viewer/js/rino-legacy.js" nomodule></script>
 
-	<script src="${pageContext.request.contextPath}/component/jquery/jquery-3.3.1.min.js"></script>
-	<script src="${pageContext.request.contextPath}/component/jquery/jquery-ui.js"></script>
-	<script src="${pageContext.request.contextPath}/component/bootstrap/bootstrap.min.js"></script>
-	<script src="${pageContext.request.contextPath}/component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="${pageContext.request.contextPath}/component/jquery/jquery.selectric.js"></script>
-	<script src="${pageContext.request.contextPath}/component/ol/ol5.3.js"></script>
-	
-	<script src="${pageContext.request.contextPath}/common/js/topBar.js"></script>
-	<script src="${pageContext.request.contextPath}/common/js/common.js"></script>
+	<script src="/component/jquery/jquery-3.3.1.min.js"></script>
+	<script src="/component/jquery/jquery-ui.js"></script>
+	<script src="/component/bootstrap/bootstrap.min.js"></script>
+	<script src="/component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/component/jquery/jquery.selectric.js"></script>
+	<script src="/component/ol/ol5.3.js"></script>
+	/common/js/topBar.js"></script>
+	<script src="/common/js/common.js"></script>
 	
 	<!-- 지도 추가 후 설정 -->
-	<script src="${pageContext.request.contextPath}/vehicle/js/map/cluster.js"></script>
-	<script src="${pageContext.request.contextPath}/vehicle/js/map/layer.js"></script>
-	<script src="${pageContext.request.contextPath}/vehicle/js/map/history.js"></script>
-	<script src="${pageContext.request.contextPath}/vehicle/js/info/status.js"></script>
+	<script src="/vehicle/js/map/cluster.js"></script>
+	<script src="/vehicle/js/map/layer.js"></script>
+	<script src="/vehicle/js/map/history.js"></script>
+	<script src="/vehicle/js/info/status.js"></script>
 </body>
 </html>

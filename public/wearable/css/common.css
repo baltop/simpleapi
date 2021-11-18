@@ -1,0 +1,581 @@
+/*전체 틀 공통화 스타일*/
+
+
+/*960x540*/
+@media only screen and (min-height: 10px) and (max-height: 540px) {
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+    width: 960px;
+    height: 540px;
+    overflow: hidden;
+  }
+  .bpaWrap {
+    width: 960px;
+    height: 540px;
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+  }
+}
+
+/*1920x1080*/
+@media only screen and (min-height: 541px) and (max-height: 50000px) {
+  html,
+  body {
+    margin: 0px;
+    padding: 0px;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+  }  
+  .dashWrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1920px;
+    position: relative;
+    padding: 48px 0 0 64px;
+    background-color: #0d0f0b;
+  } 
+}
+
+.scaled {
+  transform: scale(0.5); /* Equal to scaleX(0.7) scaleY(0.7) */
+  transform-origin: top left;
+}
+
+/*common style*/
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}  
+.dashWrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+  position: relative;
+  padding: 78px 0 0 64px;
+  background-color: #0d0f0b;
+} 
+.dash_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.dash_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.dash_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_bullet.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+/* event_title */
+.event_title{
+  width: 100%;
+  height: 41px;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.event_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.event_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_event.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+
+/* inout title */
+.inout_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.inout_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.inout_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_inout.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+/* outcar title */
+
+.outcar_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.outcar_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.outcar_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_outcar.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+/* log title */
+.log_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.log_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.log_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_log.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+/* disaster  title */
+.disaster_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.disaster_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.disaster_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_disaster.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+
+/* face title */
+.face_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.face_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.face_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_face.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+
+/* smart title */
+
+.smart_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.smart_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.smart_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_smart.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+/* mobile title */
+.mobile_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.mobile_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.mobile_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_mobile.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+/* wearable title */
+.wearable_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.wearable_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+.wearable_title::before{
+  content:"";
+  display: block;
+  width: 27px;
+  height: 28px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_wearable.png") no-repeat;
+  position: absolute;
+  top: 6px;
+  left: 11px;
+}
+
+/* map title */
+
+.map_title{
+  width: 100%;
+  height: 4.1%;
+  font-family: "NotoSansCJKL";
+  font-size: 28px;
+  letter-spacing: -1.4px;
+  text-align: left;
+  color: #d3d6d0;
+  padding-left: 46.5px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+}
+.map_title span{
+  font-family: "NotoSansCJKM";
+  color: #59a30f;
+  margin-right: 5px;
+}
+
+.dash_area{
+  width: 1792px;
+  height: 900px;
+  border-radius: 16px;
+  border: solid 1px #1d1d1f;
+  background-color: #171a16;
+  float: left;
+}
+.dash_area .btn_tab_area{
+  width: 100%;
+  height: 61px;
+  border-bottom: 1px solid #070806;
+  padding-left: 10px;
+}
+.dash_area .btn_tab_area .btn_tab{
+  width: 160px;
+  height: 58px;    
+  font-family: "NotoSansCJKM";
+  font-size: 18px;
+  letter-spacing: -0.45px;
+  text-align: center;
+  color: #a5a8a3;
+  border-bottom: 3px solid transparent;
+  float: left;
+  cursor: pointer;
+  padding-top: 10px;
+}
+.dash_area .btn_tab_area .btn_tab:hover{
+  color: #d3d6d0;
+}
+.dash_area .btn_tab_area .btn_tab.active{
+  color: #ffffff;
+  border-color: #56a30f;
+}
+/* cctv */
+.cctv_area{
+  width: 1792px;
+  height: 930px;
+  border-radius: 16px;
+  border: solid 1px #1d1d1f;
+  background-color: #171a16;
+  float: left;
+}
+.cctv_tab_area{
+  width: 100%;
+  height: 61px;
+  border-bottom: 1px solid #070806;
+  padding-left: 10px;
+}
+.cctv_tab_area .cctv_tab{
+  width: 160px;
+  height: 58px;    
+  font-family: "NotoSansCJKM";
+  font-size: 18px;
+  letter-spacing: -0.45px;
+  text-align: center;
+  color: #a5a8a3;
+  border-bottom: 3px solid transparent;
+  float: left;
+  cursor: pointer;
+  padding-top: 10px;
+}
+.cctv_tab_area .cctv_tab:hover{
+  color: #d3d6d0;
+}
+.cctv_tab_area .cctv_tab.active{
+  color: #ffffff;
+  border-color: #56a30f;
+}
+.cctv_tab_area .cctv_tab.active::before{
+  content:"";
+  display: block;
+  width: 24px;
+  height: 23px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_graph.png") no-repeat;
+  position: absolute;
+  top: 0;
+  left: -3px;
+}
+/* btn map */
+
+.btn_tab_map_area{
+  width: 100%;
+  height: 61px;
+  border-bottom: 1px solid #070806;
+  padding-left: 10px;
+
+}
+.btn_tab_map_area .btn_tab_map{
+  width: 100px;
+  height: 58px; 
+}
+.btn_tab_map_area .btn_tab_map:hover{
+  color: #d3d6d0;
+}
+.btn_tab_map_area .btn_tab_map.active img{
+  color: #ffffff;
+  border: solid 3px #56a30f;
+  border-radius: 10px;
+}
+
+.dash_area .status_area .frame_title{
+  width: 100%;
+  height: 33px;
+  font-family: "NotoSansCJKL";
+  font-size: 22px;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #e3e3e3;
+  padding-left: 26px;
+  position: relative;
+  margin-bottom: 9px;
+}
+.dash_area .status_area .frame_title::before{
+  content:"";
+  display: block;
+  width: 24px;
+  height: 23px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_diamond.png") no-repeat;
+  position: absolute;
+  top: 0;
+  left: -3px;
+}
+.dash_area .btn_tab_area .btn_tab_mobile.active{
+  color: #ffffff;
+  border-color: #56a30f;
+}
+.dash_area .btn_tab_area .btn_tab_mobile{
+  width: 250px;
+  height: 58px;    
+  font-family: "NotoSansCJKM";
+  font-size: 18px;
+  letter-spacing: -0.45px;
+  text-align: center;
+  color: #a5a8a3;
+  border-bottom: 3px solid transparent;
+  float: left;
+  cursor: pointer;
+  padding-top: 10px;
+}
+.dash_area .btn_tab_area .btn_tab_mobile:hover{
+  color: #d3d6d0;
+}
+.dash_area .status_area .frame_title2{
+  width: 100%;
+  height: 33px;
+  font-family: "NotoSansCJKL";
+  font-size: 22px;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #e3e3e3;
+  padding-left: 26px;
+  position: relative;
+  margin-top: 1%;
+  margin-left:1%;
+  margin-bottom: 9px;
+}
+.dash_area .status_area .frame_title2::before{
+  content:"";
+  display: block;
+  width: 24px;
+  height: 23px;
+  background: url("../image/page/smartWeaponMgt/icon/icon_diamond.png") no-repeat;
+  position: absolute;
+  top: 0;
+  left: -3px;
+}
+.dash_area .status_area .smart_case_left .case_title{
+  width: 100%;
+  height: 22px;
+  font-family: "NotoSansCJKL";
+  font-size: 18px;
+  text-align: left;
+  color: #e3e3e3;
+  margin-top: 5%;
+  margin-left:15%;
+  margin-bottom: 9px;
+
+}
+
+
+/*float*/
+.dashWrap .ftL {
+    float: left;
+}
+.dashWrap .ftR {
+    float: right;
+}

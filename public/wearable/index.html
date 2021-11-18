@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../component/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../component/jquery/jquery.mCustomScrollbar.css" />
+  <link rel="stylesheet" href="../component/jquery/jquery-ui.css" />
+  <link rel="stylesheet" href="../component/jquery/selectric.css" />
+  <link rel="stylesheet" href="../common/css/reset.css" />
+  <link rel="stylesheet" href="../common/css/fontStyle.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/topBar.css" />
+  <link rel="stylesheet" href="css/selectBox.css" />
+  <link rel="stylesheet" href="css/statusGraph.css" />
+  <link rel="stylesheet" href="css/statusTotal.css" />
+  <link rel="stylesheet" href="css/datePicker.css" />
+</head>
+
+<body class="">
+  <section class="dashWrap">
+    <!--topBar-->
+    <header class="top_bar">
+      <div class="logo_icon"></div>
+      <!--select layout-->
+      <select class="select_top" id="selectLayout">
+        <option value="1">Layout 01</option>1
+        <option value="1">Layout 02</option>
+        <option value="1">Layout 03</option>
+      </select>
+
+      <!--button option-->
+      <button type="button" class="btn_option"></button>
+      <button type="button" class="btn_theme"></button>
+
+      <!--button logout-->
+      <button type="button" class="btn_logout">로그아웃</button>
+
+      <!--user info-->
+      <div class="user_name">홍길동</div>
+
+      <!--select dashboard-->
+      <select class="select_top ftR" id="selectDashboard">
+        <option value="1">통합상황판</option>
+        <option value="1">통합상황판</option>
+        <option value="1">통합상황판</option>
+      </select>
+    </header>
+
+    <!--main title-->
+    <div class="btn_tab_map_area">
+      <button type="button" class="btn_tab_map active" data-tab="tab1"><img src='../image/page/smartWeaponMgt/icon/icon_map_car.png'></button>
+      <button type="button" class="btn_tab_map" data-tab="tab2"><img src='../image/page/smartWeaponMgt/icon/icon_map_wearable.png'></button>
+    </div>
+    <div class="status_info graph_wrap" id="tab1">
+      <section class="dash_area">
+        <div class="map_left">
+          <div class="map_frame">
+
+          </div>
+        </div>
+        <div class="map_right">
+          <div class="map_right_top">
+            <div class="map_title">외부 운행차량 현황 <span>Vehicle</span></div>
+            <div class="map_frame">
+              <div class="map_car">
+                <div class="car_box">
+                  <header class="box_header car_color1">전체</header>
+                  <div class="box_inner">000</div>
+                </div>
+                <div class="car_box">
+                  <header class="box_header car_color2">지휘차량</header>
+                  <div class="box_inner">000</div>
+                </div>
+                <div class="car_box">
+                  <header class="box_header car_color3">작전차량</header>
+                  <div class="box_inner">000</div>
+                </div>
+                <div class="car_box">
+                  <header class="box_header car_color4">운반차량</header>
+                  <div class="box_inner">000</div>
+                </div>
+                <div class="car_box cblue">
+                  <header class="box_header car_color5">통신차량</header>
+                  <div class="box_inner">000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map_right_down">
+            <div class="map_frame">
+              <div class="map_subtitle">운행차량 목록</div>
+              <div class="map_scroll">
+                <div class="total_list_area_map">
+                  <header class="total_list_header">
+                    <div class="total_head">No</div>
+                    <div class="total_head">차량번호</div>
+                    <div class="total_head">운행타입</div>
+                    <div class="total_head">운전자명</div>
+                    <div class="total_head">상태</div>
+                    <div class="total_head">출차일시</div>
+                    <div class="total_head">복귀일시</div>
+                  </header>
+                  <div class="total_list_body">
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <div class="total_list_box">
+                      <div class="total_txt">11</div>
+                      <div class="total_txt">12다1234</div>
+                      <div class="total_txt">지휘</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">운전</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                    <var>
+                      <div class="total_list_box">
+                        <div class="total_txt">1</div>
+                        <div class="total_txt">12다1234</div>
+                        <div class="total_txt">지휘</div>
+                        <div class="total_txt">홍길동</div>
+                        <div class="total_txt">운전</div>
+                        <div class="total_txt">11-11 00:00:00</div>
+                        <div class="total_txt">11-11 00:00:00</div>
+                      </div>
+                      <div class="total_list_box">
+                        <div class="total_txt">11</div>
+                        <div class="total_txt">12다1234</div>
+                        <div class="total_txt">지휘</div>
+                        <div class="total_txt">홍길동</div>
+                        <div class="total_txt">운전</div>
+                        <div class="total_txt">11-11 00:00:00</div>
+                        <div class="total_txt">11-11 00:00:00</div>
+                      </div>
+                    </var>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div> 
+    <div class="status_info total_wrap" id="tab2">
+      <section class="dash_area">
+        <div class="map_left">
+          <div class="map_frame">
+
+          </div>
+        </div>
+        <div class="map_right">
+          <div class="map_right_top">
+            <div class="map_title">웨어러블 현황 <span>Vehicle</span></div>
+            <div class="map_frame">
+              <div class="map_wearable">
+                <div class="wearable_box">
+                  <header class="box_header car_color6">전체</header>
+                  <div class="box_inner">000</div>
+                  <footer class="box_footer">/000</footer>
+                </div>
+                <div class="wearable_box">
+                  <header class="box_header car_color7">지휘차량</header>
+                  <div class="box_inner">000</div>
+                  <footer class="box_footer">/000</footer>
+                </div>
+                <div class="wearable_box">
+                  <header class="box_header car_color8">작전차량</header>
+                  <div class="box_inner">000</div>
+                  <footer class="box_footer">/000</footer>
+                </div>
+                <div class="wearable_box">
+                  <header class="box_header car_color9">운반차량</header>
+                  <div class="box_inner">000</div>
+                  <footer class="box_footer">/000</footer>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map_right_down">
+            <div class="map_frame">
+              <div class="map_subtitle">운행차량 목록</div>
+              <div class="map_scroll">
+                <div class="total_list_area_map_wearable">
+                  <header class="total_list_header">
+                    <div class="total_head">No</div>
+                    <div class="total_head">계급</div>
+                    <div class="total_head">착용자명</div>
+                    <div class="total_head">혈압</div>
+                    <div class="total_head">심박수</div>
+                    <div class="total_head">상태</div>
+                    <div class="total_head">수신일시</div>
+                  </header>
+                  <div class="total_list_body">
+                    <div class="total_list_box">
+                      <div class="total_txt">4</div>
+                      <div class="total_txt">병장</div>
+                      <div class="total_txt">홍길동</div>
+                      <div class="total_txt">80-120</div>
+                      <div class="total_txt">70</div>
+                      <div class="total_txt">정상</div>
+                      <div class="total_txt">11-11 00:00:00</div>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+
+    <!--content start-->
+
+  </section>
+</body>
+<script src="../component/jquery/jquery-3.3.1.min.js"></script>
+<script src="../component/jquery/jquery-ui.js"></script>
+<script src="../component/bootstrap/bootstrap.min.js"></script>
+<script src="../component/jquery/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../component/jquery/jquery.selectric.js"></script>
+<script src="../component/highchart/highcharts.js"></script>
+<script src="js/topBar.js"></script>
+<script src="js/common.js"></script>
+<!-- 
+<script src="js/log/log_Pie_Chart.js"></script>
+<script src="js/log/log_Dount_Chart.js"></script>
+<script src="js/log/logColumnChart.js"></script>
+<script src="js/log/log_Pie_Chart2.js"></script>
+<script src="js/log/log_Dount_Chart2.js"></script>
+<script src="js/log/logColumnChart2.js"></script>
+ -->
+<script src="js/totalStatus.js"></script>
+
+</html>

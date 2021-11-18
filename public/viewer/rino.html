@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang=ko><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><link rel=apple-touch-icon href=./iLt/images/icoIpn.png><meta name=author content="ese, 이에스이"><meta http-equiv=description content=rino><link rel="shortcut icon" type=image/x-icon href=./iLt/images/favicon.ico><link rel=stylesheet type=text/css href=./rg/css/materialdesignicons.css><link rel=stylesheet type=text/css href=./rg/css/itsicons.css><link rel=stylesheet type=text/css href=./rg/css/animation.css><link rel=stylesheet type=text/css href=./iLt/Tmplt/eBsc/cPBlue/skin.css><meta name=viewport content="width=device-width,initial-scale=1"><title>rinoGIS Viewer</title><link href=/rgweb/viewer/css/chunk-common.css rel=preload as=style><link href=/rgweb/viewer/css/rino.css rel=preload as=style><link href=/rgweb/viewer/js/chunk-common.js rel=modulepreload as=script><link href=/rgweb/viewer/js/chunk-vendors.js rel=modulepreload as=script><link href=/rgweb/viewer/js/rino.js rel=modulepreload as=script><link href=/rgweb/viewer/css/chunk-common.css rel=stylesheet><link href=/rgweb/viewer/css/rino.css rel=stylesheet></head><body style="margin: 0px;"><noscript><strong>We're sorry but egs-map doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><script>var para = document.location.href.split('?');
+
+			if (para.length == 1) {
+				var errorMessage = document.createElement('div');
+				errorMessage.style = 'text-align:center; font-size: 150%;';
+				errorMessage.innerHTML = '잘못 된 지도 정보 입니다.<br />';
+				document.body.appendChild(errorMessage);
+			} else {
+				var mapId = para[1] && para[1] != '' ? para[1] : 1;
+				var mainURL =
+					window.location.protocol + '//' + window.location.host;
+				var serverURL = mainURL + '/rgsv';
+				//var serverURL = 'http://localhost:8888/rgsv';
+				var webURL = mainURL + '/rgweb';
+				var mapElement = document.createElement('div');
+				mapElement.id = 'rino-map';
+				mapElement.setAttribute('data-rino-map', mapId);
+				mapElement.setAttribute('data-rino-gis-server', serverURL);
+				mapElement.setAttribute('data-rino-gis-web', webURL);
+
+				document.body.appendChild(mapElement);
+			}</script><script>window.addEventListener('rino-map-mounted', function(e) {
+				console.log(e, rinoGIS);
+			});</script><script type=module src=/rgweb/viewer/js/chunk-vendors.js></script><script type=module src=/rgweb/viewer/js/chunk-common.js></script><script type=module src=/rgweb/viewer/js/rino.js></script><script>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script><script src=/rgweb/viewer/js/chunk-vendors-legacy.js nomodule></script><script src=/rgweb/viewer/js/chunk-common-legacy.js nomodule></script><script src=/rgweb/viewer/js/rino-legacy.js nomodule></script></body></html>

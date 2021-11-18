@@ -1,0 +1,120 @@
+/*facility widget style*/
+.wearable_widget{
+    width: 450px;
+    height: auto;
+    opacity: 0.95;
+    border-radius: 4px;
+    box-shadow: 0px 4px 7.9px 0.1px rgba(0, 0, 0, 0.16);
+    border: solid 1px #b9b9be;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 22px 0 23px 30px;
+    position: absolute;
+}
+
+.wearable_widget_cluster{
+    width: 280px;
+    height: 180px;
+    opacity: 0.95;
+    border-radius: 4px;
+    box-shadow: 0px 4px 7.9px 0.1px rgba(0, 0, 0, 0.16);
+    border: solid 1px #b9b9be;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 22px 0 23px 30px;
+    position: absolute;
+}
+
+.wearable_widget .widget_name,
+.wearable_widget_cluster .widget_name{
+    width: auto;
+    height: 24px;
+    font-family: "NotoSansCJKB";
+    font-size: 18px;
+    letter-spacing: -0.55px;
+    text-align: left;
+    color: #383b45;
+    padding-left: 38px;
+    position: relative;
+}
+.wearable_widget .widget_name.fire_icon::before,
+.wearable_widget_cluster .widget_name.fire_icon::before{
+    content:"";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../../image/page/wearable/icon_bell.png") no-repeat;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+.wearable_widget .widget_name.bell_icon::before,
+.wearable_widget_cluster .widget_name.bell_icon::before{
+    content:"";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../../image/page/wearable/icon_bell.png") no-repeat;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+.wearable_widget .btn_close,
+.wearable_widget_cluster .btn_close{
+    width: 13px;
+    height: 13px;
+    background: url("../../image/page/wearable/btb_close_normal.png") no-repeat;
+    position: absolute;
+    top: 30px;
+    right: 24px;
+}
+.wearable_widget .btn_close:hover,
+.wearable_widget_cluster .btn_close:hover{
+    background: url("../../image/page/wearable/btb_close_hover.png") no-repeat;
+}
+.wearable_widget .wearable_table{
+    width: 392px;
+    height: auto;
+    margin-top: 18px;
+    border-top: 1px solid #aeafb0;
+    border-bottom: 1px solid #aeafb0;
+}
+.wearable_widget_cluster .content{
+    width: 230px;
+    height: 120px;
+}
+
+.wearable_widget_cluster .wearable_table{
+    width: 200px;
+    height: auto;
+    margin-top: 18px;
+    border-top: 1px solid #aeafb0;
+    border-bottom: 1px solid #aeafb0;
+}
+
+.wearable_widget .wearable_table tr td,
+.wearable_widget_cluster .wearable_table tr td{
+    font-family: "NotoSansCJKR";
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 6px;
+    letter-spacing: -0.3px;
+}
+.wearable_widget .wearable_table tr td:nth-child(odd),
+.wearable_widget_cluster .wearable_table tr td:nth-child(odd){
+    background-color: #edf0f2;
+    color: #65666b;
+}
+.wearable_widget .wearable_table tr,
+.wearable_widget_cluster .wearable_table tr{
+    border-bottom: 1px solid #d8d9da;
+    height: 30px;
+}
+.wearable_widget .wearable_table tr:last-child,
+.wearable_widget_cluster .wearable_table tr:last-child{
+    border: none;
+}
+.wearable_widget .wearable_table tr.wide_size,
+.wearable_widget_cluster .wearable_table tr.wide_size{
+    height: 50px;
+}
+

@@ -1,0 +1,119 @@
+/*selectBox style*/
+.selectric-wrapper {
+  margin: 0px;
+  z-index: 1;
+}
+.selectric-select_top .selectric-items ul{
+  padding: 0px;
+}
+.selectric-select_top .button:after {
+  border-top-color: transparent;
+  width: 0px;
+  height: 0px;
+  border: none;
+}
+.selectric-select_top .selectric-items .selectric-scroll {
+  overflow-x: hidden;
+}
+.selectric-wrapper.selectric-select_top.selectric-ftR{
+  float: right;
+}
+/*select_top*/
+.selectric-select_top .selectric {
+  width: 174px;
+  height: 30px;
+  border-radius: 6px;
+  font-family: "NotoSansCJKM";
+  font-size: 12px;
+  text-align: left;
+  color: #f0f0f0;
+  letter-spacing: -0.3px;
+  padding-left: 0px;
+  margin: 0;
+  cursor: pointer;
+  border: solid 1px #131412;
+  background-color: #373b34;
+  float: left;
+}
+.selectric-select_top.selectric-open .selectric{
+  border: solid 1px #56a30f;
+  background-color: #1c1f18;
+}
+.selectric-select_top .selectric-items {
+  width: 174px;
+  border-radius: 6px;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  border: solid 1px #56a30f;
+  background-color: #1c1f18;
+  padding: 6px 0;
+}
+.selectric-select_top .selectric-items li {
+  font-family: "NotoSansCJKM";
+  font-size: 12px;
+  text-align: left;
+  color: #d6d6d6;
+  letter-spacing: -0.3px;
+  line-height: 2.5;
+  padding: 0 14px 0 14.7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 174px;
+  height: 30px;
+}
+.selectric-select_top .selectric-items li:hover {
+  width: 174px;
+  height: 30px;
+  font-family: "NotoSansCJKM";
+  font-size: 12px;
+  color: #d6d6d6;
+  background-color: #323831;
+}
+.selectric-select_top .selectric-items li.selected,
+.selectric-select_top .selectric-items li.selected:hover {
+  width: 174px;
+  height: 30px;
+  font-family: "NotoSansCJKM";
+  font-size: 12px;
+  color:#ffffff;
+  background-color: #56a30f;
+}
+.selectric-select_top .selectric .label {
+  font-family: "NotoSansCJKL";
+  font-size: 12px;
+  color: #f0f0f0;
+  text-align: left;
+  padding: 0 30px 0 40.7px;
+  line-height: 2.35;
+  height: 30px;
+}
+.selectric-select_top .button {
+  width: 12px;
+  height: 8px;
+  background: url("../image/common/topBar/btn_selectBox_down_normal.png") no-repeat;
+  top: 11px;
+  right: 14px;
+}
+.selectric-select_top .button:hover{
+  background: url("../image/common/topBar/btn_selectBox_down_hover.png") no-repeat;
+}
+.selectric-select_top.selectric-open .button{
+  background: url("../image/common/topBar/btn_selectBox_up_normal.png") no-repeat;
+}
+.selectric-select_top.selectric-open .button:hover{
+  background: url("../image/common/topBar/btn_selectBox_up_hover.png") no-repeat;
+}
+
+/*selectric scroll style*/
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color:transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color:#acb0a4;
+  border-radius: 2.5px;
+}

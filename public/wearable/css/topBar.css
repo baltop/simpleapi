@@ -1,0 +1,98 @@
+/*topBar style*/
+.top_bar{
+    width: 1920px;
+    height: 48px;
+    box-shadow: 0px 5px 15px 0 rgba(8, 10, 13, 0.3);
+    background-color: #21241e;
+    padding: 9px 30px 0 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+}
+.top_bar .logo_icon{
+    width: 116px;
+    height: 42px;
+    background: url("../../image/common/topBar/img_logo.png") no-repeat;
+    float: left;
+    margin: -6px 85px 0 0;
+}
+.top_bar::before{
+    content:"";
+    display: block;
+    width: 17px;
+    height: 14px;
+    background: url("../../image/common/topBar/icon_layout.png") no-repeat;
+    position: absolute;
+    top: 18px;
+    left: 251px;
+    z-index: 2;
+}
+.top_bar::after{
+    content:"";
+    display: block;
+    width: 17px;
+    height: 14px;
+    background: url("../../image/common/topBar/icon_monitor.png") no-repeat;
+    position: absolute;
+    top: 17px;
+    right: 442px;
+    z-index: 2;
+}
+.top_bar .btn_option{
+    width: 30px;
+    height: 30px;
+    background: url("../../image/common/topBar/btn_option_normal.png") no-repeat;
+    float: right;
+    margin-left: 10px;
+}
+.top_bar .btn_option:hover{
+    background: url("../../image/common/topBar/btn_option_hover.png") no-repeat;
+}
+.top_bar ._logout{
+    width: 81px;
+    height: 30px;
+    font-family: "NotoSansCJKB";
+    letter-spacing: -0.3px;
+    text-align: center;
+    font-size: 12px;
+    color: #f0f0f0;
+    border-radius: 6px;
+    border: solid 1px #565c54;
+    background-color: #434742;
+    float: right;
+}  
+.top_bar .btn_logout:hover{
+    border: solid 1px #677064;
+    background-color: #545952;
+    color: #e1e1e3;
+}
+.top_bar .user_name{
+    width: 116px;
+    height: 20px;
+    font-family: "NotoSansCJKM";
+    font-size: 14px;
+    letter-spacing: -0.35px;
+    text-align: left;
+    color: #f0f0f0;
+    line-height: 1.4;
+    float: right;
+    margin: 5.4px 0 0 33px;
+    padding: 0 10px 0 41.7px;
+    border-left: 1px solid #43473f;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.top_bar .user_name::before{
+    content:"";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../../image/common/topBar/icon_user.png") no-repeat;
+    position: absolute;
+    top: 2px;
+    left: 22px;
+}
